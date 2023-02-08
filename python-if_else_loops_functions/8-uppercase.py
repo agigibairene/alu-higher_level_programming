@@ -1,4 +1,9 @@
 #!/usr/bin/python3
-a = __import__('8-uppercase').uppercase
-a("best")
-a("My best School 98 battery street")
+def uppercase(str):
+    for x in range(len(str)):
+        if ord(str[x]) >= ord('a') and ord(str[x]) <= ord('z'):
+            atoA = ord(str[x]) + (ord('A') - ord('a'))
+        else:
+            atoA = ord(str[x])
+        print("{}".format(chr(atoA)), end='')
+    print()
