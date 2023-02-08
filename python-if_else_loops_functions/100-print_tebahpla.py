@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-i = 0
-for a in range(ord('z'), ord('a')-1, -1):
-    print("{}".format(chr(a-i) if i == 32 else i = 32 ), end="")
+for x in range(-ord('z'), -ord('a') -1):
+    if (x % 2) !=0:
+        x = x -(ord('A') - ord('a'))
+    print("{}".format(chr(-x) ), end="")
