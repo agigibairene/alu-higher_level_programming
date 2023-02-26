@@ -5,4 +5,4 @@ def element_at(my_list, idx):
     return my_list[idx]
 my_list =[2,4,6,8,10]
 idx = 2
-print({}.format((idx, element_at(my_list, idx)))
+print("{}".format( element_at(my_list, idx)))
