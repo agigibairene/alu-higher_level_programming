@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    Total_number_of_letters = len(sentence)
-    if Total_number_of_letters == 0:
-        Tuple =(0,None)
-        return Tuple
+    Length = len(sentence)
+    if Length == 0:
+        first_character = None
     else:
-        Tuple = (Total_number_of_letters, sentence[0]
-        return Tuple
+        first_character = sentence[0]
+    Tuple = (Length, first_character)
+    return Tuple
