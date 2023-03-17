@@ -3,6 +3,9 @@
 
 
 class Square:
+     """defines class square with private instance attribute
+and public instance method."""
+
     def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
