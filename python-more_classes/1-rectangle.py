@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""creates class Rectangle with private instance attribute"""
+"""creates a class Rectangle"""
 
 
 class Rectangle:
-    """defines class Rectangle with private instance attributes width and height"""
+    """defines class Rectangle with private instance attributes and public instance methods"""
 
     def __init__(self, width=0, height=0):
         self.width = width
