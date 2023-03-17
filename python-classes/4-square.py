@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""creates class square with private instance attribute size and public instance method (area)"""
+"""creates class Square with
+private instance attribute size and public instance method"""
 
 
 class Square:
-    """defines class Square with  private instance attribute
-and public instance method"""
+    """defines class with private instance attribute size and public instance method(area)"""
 
     def __init__(self, size=0):
         self.__size = size
@@ -20,6 +20,7 @@ and public instance method"""
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     def area(self):
         """calculates and returns current square area"""
         return(self.__size * self.__size)
