@@ -4,7 +4,7 @@
 
 class Rectangle:
     """defines class Rectangle with 
-    private instance attributes (width and height)
+private instance attributes (width and height)
 and public instance methods"""
 
     def __init__(self, width=0, height=0):
@@ -44,3 +44,14 @@ and public instance methods"""
         if self.width == 0 or self.height == 0:
             return 0
         return ((2 * self.width) + (2 * self.height))
+
+    def __str__(self):
+        rec_string = ""
+        if self.width == 0 or self.height == 0:
+            return (rec_string)
+        for row in range(self.height):
+            for column in range(self.width):
+                rec_string += "#"
+            rec_string += "\n"
+        rec_string = rec_string[:-1]
+        return (rec_string)
