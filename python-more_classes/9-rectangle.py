@@ -4,12 +4,7 @@
 
 class Rectangle:
     """defines class Rectangle with private instance attributes width/height
-and public instance methods to return the rectangle area and primeter
-and public class attributes to track of number of instances and print symbol
-and can print the rectangle using print_symbol with print() or str()
-and returns representation of the rectangle to be used by eval()
-and prints message when deleted
-and static method to compare and return the largest rectangle based on area"""
+and public instance methods"""
 
     number_of_instances = 0
     print_symbol = '#'
@@ -88,6 +83,6 @@ and static method to compare and return the largest rectangle based on area"""
         else:
             return (rect_1)
 
-        @classmethod
+    @classmethod
     def square(cls, size=0):
         return (cls(size, size))
