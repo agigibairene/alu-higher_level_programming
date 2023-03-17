@@ -3,7 +3,8 @@
 
 
 class Square:
-    """defines a class square with a private instance attribute and a public instance method"""
+    """defines a class square with
+    a private instance attribute and a public instance method"""
 
     def __init__(self, size=0):
         """Initialize a new square.
