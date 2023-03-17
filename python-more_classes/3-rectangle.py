@@ -6,7 +6,6 @@ class Rectangle:
     """defines class Rectangle with 
     private instance attributes (width and height)
     and public instance methods"""
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
