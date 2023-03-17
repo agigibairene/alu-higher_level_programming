@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""Creates a class Rectangle"""
+"""creates a class Rectangle"""
 
 
 class Rectangle:
     """defines class Rectangle with private instance attributes width/height
-and public instance methods to return the rectangle area and primeter
-and can print the rectangle using '#' with print() or str()
-and returns representation of the rectangle to be used by eval()
-and prints message when deleted"""
+and public instance methods"""
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -63,6 +63,5 @@ and prints message when deleted"""
         return (rec_str)
 
     def __del__(self):
-        """prints goodbye message when rectangle is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
