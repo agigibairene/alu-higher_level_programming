@@ -2,7 +2,9 @@
 """creates a class with private instance attribute size"""
 
 class Square:
-    """defines class with a private intance attribut size and zise must be integer otherwise raise a TypeError"""
+    """
+    defines class with a private intance attribut size and size must be integer otherwise raise a TypeError
+    """
      def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
