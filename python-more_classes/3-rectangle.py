@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""creates class Rectangle with private instance attributes ansd public intance methods"""
+"""creates a class Rectangle"""
 
 
 class Rectangle:
-    """defines class Rectangle with private instance attributes (width and height)
-and public instance methods to return the rectangle area and primeter"""
+    """defines class Rectangle with private instance attributes and public instance methods"""
 
     def __init__(self, width=0, height=0):
         self.width = width
