@@ -4,7 +4,7 @@ private instance attribute size and public instance method"""
 
 
 class Square:
-    """defines class with private instance attribute
+    """defines class with  private instance attribute
 and public instance method"""
 
     def __init__(self, size=0):
@@ -23,4 +23,5 @@ and public instance method"""
         self.__size = value
 
     def area(self):
+        """calculates and returns current square area"""
         return(self.__size * self.__size)
