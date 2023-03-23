@@ -3,7 +3,6 @@
 that is a subclass of the specified class"""
 
 
-
 def inherits_from(obj, a_class):
     """returns True if object is an instance of a subclass
     of the given class"""
