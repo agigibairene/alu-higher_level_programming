@@ -1,36 +1,39 @@
 #!/usr/bin/python3
 """A script that reads stdin line by line"""
-
-
 import sys
 
 
-def print_size_and_codes(size, stat_codes):
-    print("File size: {:d}".format(size))
-    for k, v in sorted(stat_codes.items()):
-        if v:
-            print("{:s}: {:d}".format(k, v))
+def print_pretty(size, code_dict):
+    """parse important data"""
+    print("File size: {}".format(size))
+    for key, value in sorted(code_dict.items()):
+        if (value != 0):
+            print("{}: {}".format(key, value))
 
-
-def parse_stdin_and_compute():
+if __name__ == '__main__':
+    """init code to print the parsed data"""
     size = 0
-    lines = 0
-    stat_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
-                  "403": 0, "404": 0, "405": 0, "500": 0}
+    code_dict = {
+        "200": 0,
+        "301": 0,
+        "400": 0,
+        "401": 0,
+        "403": 0,
+        "404": 0,
+        "405": 0,
+        "500": 0
+    }
     try:
+        line_counter = 0
         for line in sys.stdin:
-            fields = list(map(str, line.strip().split(" ")))
-            size += int(fields[-1])
-            if fields[-2] in stat_codes:
-                stat_codes[fields[-2]] += 1
-            lines += 1
-            if lines % 10 == 0:
-                print_size_and_codes(size, stat_codes)
+            line_counter += 1
+            code = line.split()[7]
+            size += int(line.split()[8])
+            if code in code_dict:
+                code_dict[code] += 1
+            if (line_counter % 10 == 0):
+                print_pretty(size, code_dict)
+        print_pretty(size, code_dict)
     except KeyboardInterrupt:
-        print_size_and_codes(size, stat_codes)
+        print_pretty(size, code_dict)
         raise
-
-    print_size_and_codes(size, stat_codes)
-
-
-parse_stdin_and_compute()
