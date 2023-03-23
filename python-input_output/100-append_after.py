@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""defines a function that inserts a line 
+"""defines a function that inserts a line
 of text to a file after each line with given string"""
 
 
