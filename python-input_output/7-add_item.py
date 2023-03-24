@@ -1,25 +1,19 @@
 #!/usr/bin/python3
-"""Student module.
-Contains a Student class and some methods.
-"""
+"""Add item script."""
+import sys
 
+save_to_json_file = _import_('5-save_to_json_file').save_to_json_file
+load_from_json_file = _import_('6-load_from_json_file').load_from_json_file
 
-class Student():
-    """Defines a Student."""
+try:
+    lst = load_from_json_file("add_item.json")
+except:
+    lst = []
 
-    def __init__(self, first_name, last_name, age):
-        """Sets the necessary attributes for the Student object.
-        Args:
-            first_name (str): first name of the student.
-            last_name (str): last name of the student.
-            age (int): age of the student.
-        """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+argc = len(sys.argv)
 
-    def to_json(self, attrs=None):
-        """Retrieves a dictionary representation of a Student instance."""
-        if attrs is not None:
-            return {k: v for k, v in self.__dict__.items() if k in attrs}
-        return self.__dict__
+if argc > 1:
+    for i in range(1, argc):
+        lst.append(sys.argv[i])
+
+save_to_json_file(lst, "add_item.json")
