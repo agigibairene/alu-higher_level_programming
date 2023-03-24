@@ -17,4 +17,3 @@ finally:
     for i in sys.argv[1:]:
         py_list.append(str(i))
     save_to_json_file(py_list, filename)
-
