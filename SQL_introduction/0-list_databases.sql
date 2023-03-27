@@ -1,2 +1,2 @@
 --command that lists all databases
-SHOW DATABASES
+SHOW DATABASES;
