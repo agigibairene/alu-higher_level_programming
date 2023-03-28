@@ -1,3 +1,3 @@
---creates the database in MySQL server if it doesnot exist
+--create a database hbtn_0c_0 if it doesn't exists
 
 CREATE DATABASE IF NOT EXISTS `hbtn_0c_0`;
