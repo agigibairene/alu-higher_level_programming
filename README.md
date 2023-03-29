@@ -1,1 +1,1 @@
-Python - Inheritance
+SQL - More queries
