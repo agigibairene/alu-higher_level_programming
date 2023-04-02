@@ -1,3 +1,3 @@
-#!/bin/bash
-#sends a GET request to the URL, and displays the body of the response
-curl -s -H "X-HolbertonSchool-User-Id":98 "$1"
+#!bin/bash
+#send a GET request to a URL, and displays the body of the response
+curl -sH "X-HolbertonSchool-User-Id:98" "$1"
