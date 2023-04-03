@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Python script that takes in a URL and an email address, sends a POST request to the passed URL with the email as a parameter"""
+"""Python script to send POST request to given URL
+ with given email as parameter"""
 
 if __name__ == "__main__":
     import requests
