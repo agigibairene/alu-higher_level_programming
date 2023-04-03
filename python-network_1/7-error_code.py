@@ -3,7 +3,7 @@
  sends a request to the URL and displays
  the body of the response"""
 
-f __name__ == "__main__":
+if __name__ == "__main__":
     import requests
     from sys import argv
     response = requests.get(argv[1])
