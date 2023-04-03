@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-A Python script to take GitHub credentials and 
+"""A Python script to take GitHub credentials and 
 uses the GitHub API to display id"""
 if __name__ == "__main__":
     import requests
