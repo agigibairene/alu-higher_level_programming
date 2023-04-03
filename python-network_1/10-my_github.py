@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A Python script to take GitHub credentials and uses the GitHub API to display id"""
+A Python script to take GitHub credentials and 
+uses the GitHub API to display id"""
 if __name__ == "__main__":
     import requests
     from requests.auth import HTTPBasicAuth as Basic_auth
