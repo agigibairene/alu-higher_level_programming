@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """A Python script to send request to given URL 
 and display value of X-Request-Id"""
-
 if __name__ == "__main__":
     import requests
     from sys import argv
