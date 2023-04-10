@@ -1,10 +1,7 @@
 # execute test with python3 -m doctest ./tests/*
-
 First import method to test
 >>> print_square= __import__('4-print_square').print_square
-
 SUCCESS CASES:
-
 Test positive int size:
      >>> print_square(0)
 
