@@ -1,11 +1,11 @@
-Execute using python3 -m doctest ./tests/*
+#Execute using python3 -m doctest ./tests/*
 
 doctest for 2-matrix_divided.py
-============================
+
 ``matrix_divided()`` returns a new matrix with all elements scalar divided
 
 SUCCESSFUL TEST CONDITIONS
-==========================
+
 testing function with scalar division with single digit div
 ::
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
@@ -49,8 +49,7 @@ testing function with scalar division with floats
 [[1.0, 1.83, 2.67], [3.5, 4.33, 5.17]]
 
 
-TEST CONDITIONS WHERE AN ERROR IS RAISED
-========================================
+>>TEST CONDITIONS WHERE AN ERROR IS RAISED
 
 testing how function handles None argument
 ::
