@@ -1,5 +1,3 @@
-# execute test with python3 -m doctest ./tests/*
-
 ======================
 Test 4-print_square.py
 ======================
