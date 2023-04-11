@@ -2,7 +2,9 @@
 """Write a function that divides all elements of a matrix"""
 
 def matrix_divided(matrix, div):
-     """Returns new matrix with dividends"""
+    """
+    Returns new matrix with dividends"""
+    
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
@@ -26,4 +28,3 @@ def matrix_divided(matrix, div):
             newlist.append(round(i/div, 2))
         new_matrix.append(newlist)
     return new_matrix
-
