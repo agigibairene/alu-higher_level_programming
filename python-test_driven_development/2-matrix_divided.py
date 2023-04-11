@@ -6,7 +6,6 @@ def matrix_divided(matrix, div):
     """
     Returns new matrix with dividends
     """
-    
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
