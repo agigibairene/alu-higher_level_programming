@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """Write a function that divides all elements of a matrix"""
 
+
 def matrix_divided(matrix, div):
     """
-    Returns new matrix with dividends"""
+    Returns new matrix with dividends
+    """
     
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
