@@ -1,7 +1,7 @@
 # Execute test with python3 -m doctest  ./tests/*
 
-
->>>lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+First import method to test
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
 
 SUCCESS CASES:
 
