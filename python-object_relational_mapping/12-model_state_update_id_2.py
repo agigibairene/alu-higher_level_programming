@@ -9,7 +9,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-
     # make engine for database
     user = argv[1]
     passwd = argv[2]
@@ -19,7 +18,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-
     # find id and update state 
     state = session.query(State).filter_by(id=2).first()
     state.name = "New Mexico"
