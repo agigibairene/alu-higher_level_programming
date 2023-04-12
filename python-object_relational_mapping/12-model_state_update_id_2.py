@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a script that changes the name of a State object from the database"""
+"""Write a script that changes the name of
+a State object from the database"""
 
 
 from sys import argv
@@ -7,9 +8,7 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-
 if __name__ == "__main__":
-    # make engine for database
     user = argv[1]
     passwd = argv[2]
     db = argv[3]
@@ -17,8 +16,7 @@ if __name__ == "__main__":
                            format(user, passwd, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    session = Session()
-    # find id and update state 
+    session = Session() 
     state = session.query(State).filter_by(id=2).first()
     state.name = "New Mexico"
 
