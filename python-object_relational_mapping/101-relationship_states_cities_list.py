@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a script that lists all State objects, and corresponding City objects"""
+"""Write a script that lists all State
+objects, and corresponding City objects"""
 
 
 from sys import argv
