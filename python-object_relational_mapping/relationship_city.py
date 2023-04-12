@@ -3,13 +3,16 @@
 
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from relationship_state import Base
+from sqlalchemy.ext.declarative import declarative_base
+from relationship_state import Base, State
 
+# Base
 class City(Base):
     """
-    defines City class that links to MySQL table 'cities'
+    Class City
+    Linked to MySQL table
     """
-    __tablename__ = 'cities'
-    id = Column(Integer, primary_key=True, nullable=False)
+    __tablename__ = "cities"
+    id = Column(Integer, nullable=False, primary_key=True)  # autoincrements
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
+    state_id = Column(Integer, ForeignKey(State.id), nullable=False)
