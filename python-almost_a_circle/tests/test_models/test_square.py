@@ -2,18 +2,17 @@
 """unittest for Rectangle class"""
 
 
+import os
 import unittest
-import pep8
-
-from models.square import Square
 from io import StringIO
 from unittest.mock import patch
 
 from models.base import Base
+from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
-        """Test for class Square"""
+    """Test for class Square"""
 
     def test_instance(self):
         """Test the functions in square"""
