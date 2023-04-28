@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """create class Base"""
+import json
 
 
-class Base():
-    """manages id attribute in all future classes"""
+class Base:
+    """class named base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """initializes to given id or
-        increases class nb_objects and sets as default id"""
+        """initialising the init function"""
         if id is not None:
             self.id = id
         else:
@@ -17,57 +17,60 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """returns JSON string representation of list of dictionaries"""
-        import json
+        """json to string function"""
         if list_dictionaries is None:
             return "[]"
+
         if len(list_dictionaries) == 0:
             return "[]"
+
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """writes the JSON string representaiton of
-        list of instances who inherits from Base to a file"""
-        if list_objs is None:
-            list_objs = []
-        filename = cls.__name__ + ".json"
-        list_dictionaries = []
-        for instance in list_objs:
-            list_dictionaries.append(instance.to_dictionary())
-        with open(filename, 'w') as f:
-            f.write(cls.to_json_string(list_dictionaries))
+        """save file function"""
+        fname = cls.__name__ + ".json"
+        x = []
+        if list_objs:
+            for i in list_objs:
+                x.append(cls.to_dictionary(i))
+
+        with open(fname, mode="w") as saveme:
+            saveme.write(cls.to_json_string(x))
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the JSON string representation
-        for list of dictionaries"""
-        import json
+        """from json to string"""
         if json_string is None:
             return []
-        else:
-            return json.loads(json_string)
+
+        if len(json_string) == 0:
+            return []
+
+        j_list = json.loads(json_string)
+        return j_list
 
     @classmethod
     def create(cls, **dictionary):
-        """returns an instance with all attributes already set
-        using update method"""
+        """create function"""
         if cls.__name__ == "Rectangle":
-            instance = cls(1, 1, 0, 0)
+            dummy = cls(3, 2)
         if cls.__name__ == "Square":
-            instance = cls(1, 0, 0)
-        instance.update(**dictionary)
-        return instance
+            dummy = cls(3)
+        dummy.update(**dictionary)
+        return dummy
 
     @classmethod
     def load_from_file(cls):
-        """return list of instances from file containing saved JSON string"""
-        filename = cls.__name__ + ".json"
-        results = []
+        """load from file function"""
         try:
-            with open(filename, 'r') as f:
-                for instance in cls.from_json_string(f.read()):
-                    results.append(cls.create(**instance))
-        except Exception as err:
-            pass
-        return (results)
+            with open(cls.__name__ + ".json", "r") as doc:
+                document = doc.read()
+        except FileNotFoundError:
+            return []
+
+        w = cls.from_json_string(document)
+        x = []
+        for z in w:
+            x.append(cls.create(**z))
+        return x
