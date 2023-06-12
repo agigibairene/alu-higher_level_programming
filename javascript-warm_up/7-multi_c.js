@@ -1,4 +1,4 @@
-i/usr/bin/node
+#!/usr/bin/node
 const { argv } = process;
 const numArg = Number(argv[2]);
 if (!numArg) console.log('Missing number of occurrences');
