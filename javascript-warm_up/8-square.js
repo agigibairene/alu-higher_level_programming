@@ -1,5 +1,4 @@
 #!/usr/bin/node
-#!/usr/bin/node
 const myVar = 'X';
 const myArgs = process.argv.splice(2);
 const num = Number(myArgs[0]);
